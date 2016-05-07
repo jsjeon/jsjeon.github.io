@@ -1,0 +1,318 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com 
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+% GENERAL NOTE:  There may be some notes specific to myself.  If you're only interested in my LaTeX source or it doesn't make sense, please disregard it.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[pdftex, pdftitle={Resume for Jinseong Jeon - \today}]{hyperref} \hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black    % can put red here to visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.30}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\usepackage{fancyhdr}
+\rfoot{}
+\cfoot{}
+\lfoot{} %\lfoot{\small Last Updated: \today}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+\usepackage{natbib}
+\renewcommand{\bibfont}{\small}
+
+\usepackage{multibib}
+\newcites{art}{Journal Articles}
+\newcites{conf}{Conference/Workshop Proceedings}
+\newcites{post}{Posters}
+\newcites{tr}{Technical Reports}
+
+\begin{document}
+
+\newcommand{\mywebheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Jinseong Jeon}}
+& \href{mailto:jsjeon@google.com}{jsjeon@google.com} \hspace{1mm}$\vert$\hspace{1mm} 425-626-9074
+\\
+  {\small 787 6th St S, Kirkland, WA 98033}
+& \href{https://jsjeon.github.io/}{\url{https://jsjeon.github.io/}}
+\\
+\end{tabular*}
+\\
+\vspace{0.1in}}
+
+% CHANGE HEADER SOURCE HERE
+\mywebheader
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+  \begin{itemize}
+    \item
+      \ressubheading{\href{https://www.cs.umd.edu}{University of Maryland, College Park}}{College Park, MD}{{Ph.D. in Computer Science}}{Feb 2016}
+    \item
+      \ressubheading{\href{https://cs.kaist.ac.kr}{KAIST}}{Daejeon, Korea}{{M.S. in Computer Science}}{Feb 2007}
+\begin{comment}
+Outstanding Master's Thesis Award from Dept. of Computer Science, KAIST
+\end{comment}
+    \item
+      \ressubheading{\href{https://cs.kaist.ac.kr}{KAIST}}{Daejeon, Korea}{{B.S. in Computer Science}}{Feb 2005}
+\begin{comment}
+Graduated with High Honor (\emph{Magna Cum Laude})
+\end{comment}
+  \end{itemize} % End Education list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Experience}
+  \begin{itemize}
+    \item
+      \ressubheading{{Google Inc.}}{Kirkland, WA}{Software Engineer}{Feb 2016 -- Present}
+        {
+\small
+        \begin{itemize}
+\item\emph{\href{https://cloud.google.com/compute/}{Google Compute Engine}}:
+Details are undisclosed due to NDA.
+        \end{itemize}
+        }
+    \item
+      \ressubheading{{University of Maryland, College Park}}{College Park, MD}{Research Assistant}{Jun 2011 -- Feb 2016}
+        {
+\small
+        \begin{itemize}
+\item\emph{\textsc{Pasket}: Synthesizing Framework Models for Symbolic Execution}~\cite{ac-study, icse16, fse15, cav15, popl14, jsk-tr}:
+Researched and developed scalable synthesis of models for object-oriented,
+event-driven frameworks, such as Java Swing and Android,
+that enable other static analysis tools
+to analyze real-world apps effectively and efficiently.
+
+\item\emph{SymDroid: Symbolic Execution for Dalvik Bytecode}~\cite{esorics15, esorics15-tr, symdroid}:
+Developed a symbolic execution engine for Android apps,
+which explores apps' possible behaviors and
+discovers under what circumstance apps may disclose which sensitive user data.
+
+\item\emph{Brahmastra: Driving Apps to Test the Security of Third-Party Components}~\cite{security14}:
+Designed and implemented a static analysis that extracts program execution paths
+from app's entry points to method calls of interest, e.g., authorization APIs
+in Facebook SDK, which are in turn used to steer apps so as to test
+security properties of third-party components in a large scale.
+
+\item\emph{\href{https://github.com/plum-umd/troyd}{Troyd: Integration Testing Framework for Android}}~\cite{troyd}:
+Developed a script-based testing framework for Android
+that allows testers to run Android apps via command-line interface;
+record testing scenarios; and replay recorded scenarios as regression tests.
+
+\item\emph{\href{https://github.com/plum-umd/redexer}{Redexer: Dalvik Bytecode Instrumentation Framework}}~\cite{spsm12, drandroid, acplib}:
+Developed a general-purpose bytecode rewriting framework for Android,
+which is composed of a rich set of utilities that let programmers
+parse, manipulate, and generate Dalvik bytecode from scratch.
+        \end{itemize}
+        }
+    \item
+      \ressubheading{{Google Inc.}}{Mountain View, CA}{Software Engineering Intern}{May -- Aug 2015}
+        {
+\small
+        \begin{itemize}
+\item\emph{\href{https://developers.google.com/cloud-test-lab/}{Mobile Testing as a Service (MTaaS)}}:
+Details are undisclosed due to NDA.
+%Designed and developed an Android Studio plugin that records user interactions
+%via instrumentation and synthesizes repeatable test code
+%(e.g., \href{https://developer.android.com/training/testing/ui-testing/espresso-testing.html}{Espresso})
+%from the logs.
+        \end{itemize}
+        }
+    \item
+      \ressubheading{{Microsoft Research}}{Redmond, WA}{Research Intern}{May -- Aug 2014}
+        {
+\small
+        \begin{itemize}
+\item\emph{AppFormer: Synthesizing Cross-Platform Mappings from Examples}:
+Researched automatic creation of platform-to-platform mappings
+(e.g., Android to Windows Phone) by logging example apps' behaviors and
+summarizing them via template-based program synthesis.
+        \end{itemize}
+        }
+    \item
+      \ressubheading{{University of Maryland, College Park}}{College Park, MD}{Teaching Assistant}{Aug 2010 -- May 2011}
+        {
+\small
+        \begin{itemize}
+\item\emph{CMSC 330 Organization of Programming Languages by Dr. Jeffrey S. Foster}:
+Designed meta-scripts that generate testing scripts
+that conduct regression tests over hundreds of students' projects.
+\item\emph{CMSC 132 Object-Oriented Programming II by Larry Herman}:
+Assisted in teaching basic algorithms and data structures in Java.
+        \end{itemize}
+        }
+
+    \item
+      \ressubheading{{Agency for Defense Development}}{Daejeon, Korea}{Researcher}{Feb 2007 -- Jul 2010}
+        {
+\small
+        \begin{itemize}
+\item Worked with an ELINT (ELectric INTelligence) team to build a pod-style ELINT system,
+\item Researched an adaptive way to test the system with
+a minimal number of input RF signals~\cite{valid09},
+\item Designed a compact, hard-to-decompose data format for ELINT system missions, and
+\item Developed a passive geolocation algorithm for RF signals.
+        \end{itemize}
+        }
+%\bigskip % PAGE BREAK
+    \item
+      \ressubheading{{KAIST}}{Daejeon, Korea}{Research Assistant}{Mar 2006 -- Feb 2007}
+        {
+\small
+        \begin{itemize}
+\item\emph{\href{https://github.com/jsjeon/rtfa}{RTFA: Layout Transformation for Heap Objects}}~\cite{TACO09, cc07}:
+Developed a compiler optimization that infers data structure access patterns
+and transforms heap layouts to improve program performance
+by increasing cache hit ratios
+(\emph{won an Outstanding Master's Thesis Award from the department}).
+\item\emph{Raccon: Buffer Overrun Analyzer for C Programs}~\cite{KIISE05, kcc06}:
+Modified a buffer overrun analyzer for C programs so that
+it can distinguish k different call contexts during analysis.
+        \end{itemize}
+        }
+    \item
+      \ressubheading{KAIST}{Daejeon, Korea}{Teaching Assistant}{Mar 2005 -- Feb 2006}
+        {
+\small
+        \begin{itemize}
+\item\emph{CS220 Programming Principles by Dr. Taisook Han}:
+Assisted in teaching functional programming via Dr. Scheme, which is now Racket.
+\item\emph{CS230 System Programming by Dr. Jinsoo Kim}:
+Led a small group of students and helped them learn shell programming
+(\emph{won an Excellent Teaching Assistant Award from the department}).
+        \end{itemize}
+        }
+    \item
+      \ressubheading{Tmax Soft}{Seongnam, Korea}{Internship}{Jul -- Aug 2004}
+        {
+\small
+        \begin{itemize}
+\item Programmed a simple bulletin board system (BBS) based on Java Servlet and JSP.
+        \end{itemize}
+        }
+\end{itemize}  % End Experience list
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Awards and Activities}
+  \begin{description}
+\item\textbf{Scholarships and Awards:}
+\begin{itemize}
+\item CAV15 Student Scholarship \hfill 2015
+\item Google Fellowship Nominee, Dept. of Computer Science, UMD \hfill 2013 
+\item Outstanding Master's Thesis Award, Dept. of Computer Science, KAIST \hfill 2007
+\item Excellent Teaching Assistant Award, Dept. of Computer Science, KAIST \hfill 2005
+\item \emph{Magna Cum Laude}, KAIST \hfill 2005
+%\item Scholarship from Jungsoo Foundation \hfill 2003 -- 2004
+\end{itemize}
+\item\textbf{Professional Activities:}
+\begin{itemize}
+\item Reviewer, IEEE Transactions on Mobile Computing (TMC) \hfill 2015
+\item Artifact Evaluation Committee, PLDI '15 \hfill 2015
+\item Reviewer, POPL '15, ICSE '15 \hfill 2014
+\item Reviewer, Journal of Information Security and Applications (JISA) \hfill 2014
+\item Reviewer, IEEE Transactions on Dependable and Secure Computing (TDSC) \hfill 2013
+\end{itemize}
+\item\textbf{Extracurricular Activities:}
+\begin{itemize}
+\item Chair of Academic Affair, Washington Metro Chapter, Korean-American Scientist and Engineer's Association (KSEA) \hfill 2014 -- 2015
+\item Staff of Korea Graduate Student Associates (KGSA), UMD \hfill 2013 -- 2015
+\item Vice president of Korea Graduate Student Associates (KGSA), UMD \hfill 2011 -- 2013
+\item Vice president of the senior class in Dept. of Computer Science, KAIST \hfill 2004
+\end{itemize}
+  \end{description} % End Skills list
+
+\resheading{\href{http://scholar.google.com/citations?user=6l5Wb4QAAAAJ&hl=en\%22}{Publications}}
+\begingroup
+\renewcommand{\section}[2]{}
+%
+\begin{description}
+\item\textbf{Journal Articles}
+%
+\nociteart{ac-study}
+\nociteart{TACO09}
+\nociteart{KIISE05}
+\bibliographystyleart{unsrt}
+\bibliographyart{cv}
+%
+\item\textbf{Conference/Workshop Proceedings}
+%
+\nociteconf{icse16}
+\nociteconf{esorics15}
+\nociteconf{fse15}
+\nociteconf{cav15}
+\nociteconf{security14}
+\nociteconf{spsm12}
+\nociteconf{valid09}
+\nociteconf{kcc07}
+\nociteconf{cc07}
+\nociteconf{kcc06}
+\bibliographystyleconf{unsrt}
+\bibliographyconf{cv}
+%
+\item\textbf{Posters}
+%
+\nocitepost{popl14}
+\bibliographystylepost{unsrt}
+\bibliographypost{cv}
+%
+\item\textbf{Technical Reports}
+%
+\nocitetr{jsk-tr}
+\nocitetr{esorics15-tr}
+\nocitetr{troyd}
+\nocitetr{symdroid}
+\nocitetr{drandroid}
+\nocitetr{acplib}
+\bibliographystyletr{unsrt}
+\bibliographytr{cv}
+%
+\end{description}
+%
+\endgroup
+
+\end{document}
