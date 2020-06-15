@@ -15,7 +15,7 @@
 \usepackage[empty]{fullpage}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
-\usepackage[pdftex, pdftitle={Resume for Jinseong Jeon - \today}]{hyperref} \hypersetup{
+\usepackage[pdftex, pdftitle={CV for Jinseong Jeon - \today}]{hyperref} \hypersetup{
     colorlinks,%
     citecolor=black,%
     filecolor=black,%
@@ -76,9 +76,9 @@
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
   \textbf{{\LARGE Jinseong Jeon}}
 & \href{mailto:jsjeon@cs.umd.edu}{jsjeon@cs.umd.edu}
-% \hspace{1mm}$\vert$\hspace{1mm} 425-626-9o74
+% \hspace{1mm}$\vert$\hspace{1mm} 425-626-9o7A
 \\
-  {\small 747 6th St S, Kirkland, WA 98033}
+  {\small 1120 112th Ave NE, Bellevue, WA 98004}
 & \href{https://jsjeon.github.io/}{\url{https://jsjeon.github.io/}}
 \\
 \end{tabular*}
@@ -109,13 +109,27 @@ Graduated with High Honor (\emph{Magna Cum Laude})
 \resheading{Experience}
   \begin{itemize}
     \item
-      \ressubheading{{Google LLC}}{Kirkland, WA}{Software Engineer}{Feb 2016 -- Present}
+      \ressubheading{{Google LLC}}{Bellevue, WA}{Senior Software Engineer}{Apr 2019 -- Present}
         {
 \small
         \begin{itemize}
+\item\emph{\href{https://github.com/JetBrains/kotlin}{Kotlin compiler}} (\href{https://github.com/JetBrains/kotlin/commits?author=jsjeon}{contributions}):
+Helped making front-end 2.0 production-ready
 \item\emph{\href{https://developer.android.com/studio/preview/index.html}{Android Compiler Toolchain}}:
-\href{https://r8.googlesource.com/r8}{D8 dexer and R8 shrinker}.
-
+\href{https://r8.googlesource.com/r8}{D8 dexer and R8 shrinker} (\href{https://r8-review.googlesource.com/q/author:jsjeon+status:merged}{contributions}):
+Researched; designed; implemented; and deployed optimizations and obfuscations, such as:
+\begin{itemize}
+\item local type/nullability analysis, call-site optimization (e.g., remove Kotlin instrinsics calls),
+\item \texttt{StringBuilder} optimization, compile-time reflection simplification, constant/call canonicalization,
+\item identifier string obfuscation, pakcage obfuscation
+\end{itemize}
+        \end{itemize}
+        }
+    \item
+      \ressubheading{{Google LLC}}{Kirkland, WA}{Software Engineer}{Feb 2016 -- Mar 2019}
+        {
+\small
+        \begin{itemize}
 \item\emph{\href{https://cloud.google.com/compute/}{Google Compute Engine}}:
 \href{https://cloudplatform.googleblog.com/2018/06/Introducing-sole-tenant-nodes-for-Google-Compute-Engine.html}{Sole-tenant nodes}.
 \href{https://cloudplatform.googleblog.com/2017/09/committed-use-discounts-for-Google-Compute-Engine-now-generally-available.html}{Committed use discounts}.
@@ -126,32 +140,32 @@ Graduated with High Honor (\emph{Magna Cum Laude})
         {
 \small
         \begin{itemize}
-\item\emph{\textsc{Pasket}: Synthesizing Framework Models for Symbolic Execution}~\cite{FMSD17, icse16, fse15, cav15, popl14, jsk-tr}:
+\item\emph{\href{https://github.com/plum-umd/pasket}{\textsc{Pasket}}: Synthesizing Framework Models for Symbolic Execution}~\cite{FMSD17, icse16, fse15, cav15, popl14, jsk-tr}:
 Researched and developed scalable synthesis of models for object-oriented,
 event-driven frameworks, such as Java Swing and Android,
 that enable other static analysis tools
-to analyze real-world apps effectively and efficiently.
+to analyze real-world apps effectively and efficiently
 
 \item\emph{SymDroid: Symbolic Execution for Dalvik Bytecode}~\cite{esorics15, esorics15-tr, symdroid}:
 Developed a symbolic execution engine for Android apps,
 which explores apps' possible behaviors and
-discovers under what circumstance apps may disclose which sensitive user data.
+discovers under what circumstance apps may disclose which sensitive user data
 
 \item\emph{Brahmastra: Driving Apps to Test the Security of Third-Party Components}~\cite{security14}:
 Designed and implemented a static analysis that extracts program execution paths
 from app's entry points to method calls of interest, e.g., authorization APIs
 in Facebook SDK, which are in turn used to steer apps so as to test
-security properties of third-party components in a large scale.
+security properties of third-party components in a large scale
 
 \item\emph{\href{https://github.com/plum-umd/troyd}{Troyd: Integration Testing Framework for Android}}~\cite{troyd}:
 Developed a script-based testing framework for Android
 that allows testers to run Android apps via command-line interface;
-record testing scenarios; and replay recorded scenarios as regression tests.
+record testing scenarios; and replay recorded scenarios as regression tests
 
 \item\emph{\href{https://github.com/plum-umd/redexer}{Redexer: Dalvik Bytecode Instrumentation Framework}}~\cite{spsm12, drandroid, acplib}:
 Developed a general-purpose bytecode rewriting framework for Android,
 which is composed of a rich set of utilities that let programmers
-parse, manipulate, and generate Dalvik bytecode from scratch.
+parse, manipulate, and generate Dalvik bytecode from scratch
         \end{itemize}
         }
     \item
@@ -163,7 +177,7 @@ parse, manipulate, and generate Dalvik bytecode from scratch.
 Designed and prototyped an Android Studio plugin that records user interactions
 via instrumentation and synthesizes repeatable
 \href{https://developer.android.com/training/testing/ui-testing/espresso-testing.html}{Espresso}
-test code from the logs.
+test code from the logs
         \end{itemize}
         }
     \item
@@ -174,7 +188,7 @@ test code from the logs.
 \item\emph{AppFormer: Synthesizing Cross-Platform Mappings from Examples}:
 Researched automatic creation of platform-to-platform mappings
 (e.g., Android to Windows Phone) by logging example apps' behaviors and
-summarizing them via template-based program synthesis.
+summarizing them via template-based program synthesis
         \end{itemize}
         }
     \item
@@ -184,9 +198,9 @@ summarizing them via template-based program synthesis.
         \begin{itemize}
 \item\emph{CMSC 330 Organization of Programming Languages by Dr. Jeffrey S. Foster}:
 Designed meta-scripts that generate testing scripts
-that conduct regression tests over hundreds of students' projects.
+that conduct regression tests over hundreds of students' projects
 \item\emph{CMSC 132 Object-Oriented Programming II by Larry Herman}:
-Assisted in teaching basic algorithms and data structures in Java.
+Assisted in teaching basic algorithms and data structures in Java
         \end{itemize}
         }
 
@@ -199,7 +213,7 @@ Assisted in teaching basic algorithms and data structures in Java.
 \item Researched an adaptive way to test the system with
 a minimal number of input RF signals~\cite{valid09},
 \item Designed a compact, hard-to-decompose data format for ELINT system missions, and
-\item Developed a passive geolocation algorithm for RF signals.
+\item Developed a passive geolocation algorithm for RF signals
         \end{itemize}
         }
 %\bigskip % PAGE BREAK
@@ -215,7 +229,7 @@ by increasing cache hit ratios
 (\emph{won an Outstanding Master's Thesis Award from the department}).
 \item\emph{Raccon: Buffer Overrun Analyzer for C Programs}~\cite{KIISE05, kcc06}:
 Modified a buffer overrun analyzer for C programs so that
-it can distinguish k different call contexts during analysis.
+it can distinguish k different call contexts during analysis
         \end{itemize}
         }
     \item
@@ -224,10 +238,10 @@ it can distinguish k different call contexts during analysis.
 \small
         \begin{itemize}
 \item\emph{CS220 Programming Principles by Dr. Taisook Han}:
-Assisted in teaching functional programming via Dr. Scheme, which is now Racket.
+Assisted in teaching functional programming via Dr. Scheme, which is now Racket
 \item\emph{CS230 System Programming by Dr. Jinsoo Kim}:
 Led a small group of students and helped them learn shell programming
-(\emph{won an Excellent Teaching Assistant Award from the department}).
+(\emph{won an Excellent Teaching Assistant Award from the department})
         \end{itemize}
         }
     \item
@@ -235,7 +249,7 @@ Led a small group of students and helped them learn shell programming
         {
 \small
         \begin{itemize}
-\item Programmed a simple bulletin board system (BBS) based on Java Servlet and JSP.
+\item Programmed a simple bulletin board system (BBS) based on Java Servlet and JSP
         \end{itemize}
         }
 \end{itemize}  % End Experience list
@@ -255,8 +269,8 @@ Led a small group of students and helped them learn shell programming
 \end{itemize}
 \item\textbf{Professional Activities:}
 \begin{itemize}
+\item Artifact Evaluation Committee, PLDI '15, PLDI '20 \hfill 2015, 2020
 \item Reviewer, IEEE Transactions on Mobile Computing (TMC) \hfill 2015, 2018
-\item Artifact Evaluation Committee, PLDI '15 \hfill 2015
 \item Reviewer, POPL '15, ICSE '15 \hfill 2014
 \item Reviewer, Journal of Information Security and Applications (JISA) \hfill 2014
 \item Reviewer, IEEE Transactions on Dependable and Secure Computing (TDSC) \hfill 2013
