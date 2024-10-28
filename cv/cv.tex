@@ -78,7 +78,7 @@
 & \href{mailto:jsjeon@cs.umd.edu}{jsjeon@cs.umd.edu}
 % \hspace{1mm}$\vert$\hspace{1mm} 425-626-9o7A
 \\
-  {\small 1120 112th Ave NE, Bellevue, WA 98004}
+  {\small 425 Urban Plz, Kirkland, WA 98033}
 & \href{https://jsjeon.github.io/}{\url{https://jsjeon.github.io/}}
 \\
 \end{tabular*}
@@ -109,12 +109,48 @@ Graduated with High Honor (\emph{Magna Cum Laude})
 \resheading{Experience}
   \begin{itemize}
     \item
-      \ressubheading{{Google LLC}}{Bellevue, WA}{Senior Software Engineer}{Apr 2019 -- Present}
+      \ressubheading{{Google LLC}}{Kirkland, WA}{Tech Lead / Staff Software Engineer}{Mar 2023 / Nov 2024 -- Present}
         {
 \small
         \begin{itemize}
+\item\emph{Kotlin compiler at Google}:
+Leading Kotlin frontend and JVM compiler efforts within Google
+\begin{itemize}
+\item Spearheaded K2 adoption in Google monorepo
+\item Guided Android Studio migration to K2 and K2 IDE plugin
+\item Drove tooling migrations: Android Lint and Metalava in AndroidX
+\end{itemize}
+        \end{itemize}
+        }
+    \item
+      \ressubheading{{Google LLC}}{Kirkland, WA}{Senior Software Engineer}{May 2019 -- Oct 2024}
+        {
+\small
+        \begin{itemize}
+\item\emph{\href{https://github.com/JetBrains/intellij-community}{IntelliJ IDEA}} (\href{https://github.com/JetBrains/intellij-community/commits?author=jsjeon}{\underline{contributions}}):
+Designed and implemented K2 UAST from scratch:
+\begin{itemize}
+\item Unified AST for Java and Kotlin, backbone of Android Lint
+\item Landed to AndroidX: average 1.31x, up to 1.72x faster
+\item Adopted by external companies: Meta, Square, and Mozilla
+\end{itemize}
 \item\emph{\href{https://github.com/JetBrains/kotlin}{Kotlin compiler}} (\href{https://github.com/JetBrains/kotlin/commits?author=jsjeon}{\underline{contributions}}):
-Helped making front-end 2.0 production-ready
+Contributed to K2, the new Kotlin compiler frontend, end-to-end:
+\begin{itemize}
+\item Deserialization: to load Kotlin stdlib, other libraries or modules
+\item (old-school) parsing: frontend IR generation
+\item Resolution: types, declarations, call targets, SAM/suspend conversion, etc.
+\item Static analyses: control-flow / data-flow analysis, diagnostics
+\item Conversion to backend IR
+\item Serialization: to generate @Metadata for reflection
+\end{itemize}
+        \end{itemize}
+        }
+    \item
+      \ressubheading{{Google LLC}}{Kirkland, WA}{Software Engineer}{Feb 2016 -- Apr 2019}
+        {
+\small
+        \begin{itemize}
 \item\emph{\href{https://developer.android.com/studio/preview/index.html}{Android Compiler Toolchain}}:
 \href{https://r8.googlesource.com/r8}{D8 dexer and R8 shrinker} (\href{https://r8-review.googlesource.com/q/author:jsjeon+status:merged}{\underline{contributions}}):
 Researched; designed; implemented; and deployed optimizations and obfuscations, such as:
@@ -123,13 +159,6 @@ Researched; designed; implemented; and deployed optimizations and obfuscations, 
 \item \texttt{StringBuilder} optimization, compile-time reflection simplification, constant/call canonicalization,
 \item Kotlin @Metadata rewriting, identifier string obfuscation, package obfuscation
 \end{itemize}
-        \end{itemize}
-        }
-    \item
-      \ressubheading{{Google LLC}}{Kirkland, WA}{Software Engineer}{Feb 2016 -- Mar 2019}
-        {
-\small
-        \begin{itemize}
 \item\emph{\href{https://cloud.google.com/compute/}{Google Compute Engine}}:
 \href{https://cloudplatform.googleblog.com/2018/06/Introducing-sole-tenant-nodes-for-Google-Compute-Engine.html}{Sole-tenant nodes},
 \href{https://cloudplatform.googleblog.com/2017/09/committed-use-discounts-for-Google-Compute-Engine-now-generally-available.html}{Committed use discounts}
