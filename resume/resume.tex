@@ -1,0 +1,360 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7.2, 28 Aug 2024) written by LianTze Lim (liantze@gmail.com), based on the
+% CV created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[9pt,letter,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" mmayer.tex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.tex}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num.tex}
+
+%% sample.bib contains your publications
+% \addbibresource{sample.bib}
+
+\begin{document}
+\name{Jinseong Jeon}
+\tagline{Meta-program enthusiast: programs that input and/or output programs}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+% \photoR{2.5cm}{mmayer-wikipedia-cc-by-2_0}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{jsjeon@cs.umd.edu}
+%   \phone{000-00-0000}
+  \mailaddress{425 Urban Plz}
+  \location{Kirkland, WA}
+  \homepage{jsjeon.github.io}
+  % \twitter{@jsjeon}
+  % \xtwitter{@jsjeon}
+  \linkedin{jsjeon}
+%   \github{github.com/jsjeon} % I'm just making this up though.
+%   \orcid{0000-0000-0000-0000} % Obviously making this up too.
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+	%%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Tech Lead / Staff Software Engineer}{Google}{Mar 2023 / Nov 2024 -- Present}{Kirkland, WA}
+
+\begin{itemize}
+\item\emph{Kotlin compiler at Google}:
+Leading Kotlin frontend and JVM compiler efforts within Google
+\begin{itemize}
+\item Spearheaded K2 adoption in Google monorepo
+\item Guided Android Studio migration to K2 and K2 IDE plugin
+\item Drove tooling migrations: Android Lint and Metalava in AndroidX
+\end{itemize}
+\end{itemize}
+
+\divider
+
+\cvevent{Senior Software Engineer}{Google}{May 2019 -- Oct 2024}{Kirkland, WA}
+\begin{itemize}
+\item\emph{\href{https://github.com/JetBrains/intellij-community}{IntelliJ IDEA}} (\href{https://github.com/JetBrains/intellij-community/commits?author=jsjeon}{\underline{contributions}}):
+Designed and built K2 UAST from scratch:
+\begin{itemize}
+\item Unified AST for Java and Kotlin, backbone of Android Lint
+\item Landed to AndroidX: average 1.31x, up to 1.72x faster
+\item Adopted by external companies: Meta, Square, and Mozilla
+\end{itemize}
+\item\emph{\href{https://github.com/JetBrains/kotlin}{Kotlin compiler}} (\href{https://github.com/JetBrains/kotlin/commits?author=jsjeon}{\underline{contributions}}):
+Contributed to K2, the new Kotlin compiler frontend, end-to-end:
+\begin{itemize}
+\item Deserialization: to load Kotlin stdlib, other libraries or modules
+\item Frontend IR generation (a.k.a. parsing)
+\item Resolution: types, declarations, call targets, SAM/\texttt{suspend} conversion
+\item Static analyses: control-flow / data-flow analysis, diagnostics
+\item Conversion to backend IR
+\item Serialization: to generate \texttt{@Metadata} for reflection
+\end{itemize}
+\end{itemize}
+
+\divider
+
+\cvevent{Software Engineer}{Google}{Feb 2016 -- Apr 2019}{Kirkland, WA}
+\begin{itemize}
+\item\emph{\href{https://developer.android.com/studio/preview/index.html}{Android Compiler Toolchain}}:
+\href{https://r8.googlesource.com/r8}{D8 dexer and R8 shrinker} (\href{https://r8-review.googlesource.com/q/author:jsjeon+status:merged}{\underline{contributions}}):
+Researched; designed; implemented; and deployed optimizations and obfuscations, such as:
+\begin{itemize}
+\item local type/nullability analysis, call-site optimization (e.g., remove Kotlin intrinsics calls)
+\item \texttt{StringBuilder} optimization, compile-time reflection simplification, constant/call canonicalization
+\item Kotlin \texttt{@Metadata} rewriting, identifier string obfuscation, package obfuscation
+\end{itemize}
+\item\emph{\href{https://cloud.google.com/compute/}{Google Compute Engine}}:
+\href{https://cloudplatform.googleblog.com/2018/06/Introducing-sole-tenant-nodes-for-Google-Compute-Engine.html}{Sole-tenant nodes},
+\href{https://cloudplatform.googleblog.com/2017/09/committed-use-discounts-for-Google-Compute-Engine-now-generally-available.html}{Committed use discounts}
+\end{itemize}
+
+\divider
+
+\cvevent{Research Assistant}{University of Maryland}{Jun 2011 -- Feb 2016}{College Park, MD}
+
+\begin{itemize}
+\item\emph{\href{https://github.com/plum-umd/pasket}{\textsc{Pasket}}: Synthesizing Framework Models for Symbolic Execution}:
+Researched and developed scalable synthesis of models for object-oriented, event-driven frameworks, such as Android
+\item\emph{\href{https://github.com/plum-umd/redexer}{Redexer: Dalvik Bytecode Instrumentation Framework}}:
+Developed a general-purpose bytecode rewriting framework for Android
+\end{itemize}
+
+\divider
+
+\cvevent{Software Engineering Intern}{Google}{May -- Aug 2015}{Mountain View, CA}
+\begin{itemize}
+\item\emph{\href{https://developer.android.com/studio/test/espresso-test-recorder.html}{Espresso Test Recorder}}:
+Designed and prototyped an Android Studio plugin that records user interactions
+via instrumentation and synthesizes repeatable
+\href{https://developer.android.com/training/testing/ui-testing/espresso-testing.html}{Espresso}
+test code from the logs
+\end{itemize}
+
+
+%\cvsection{A Day of My Life}
+%
+%% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+%% \wheelchart{outer radius}{inner radius}{
+%% comma-separated list of value/text width/color/detail}
+%% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+%\hspace*{-1em}  %% quick hack to move the wheelchart a bit left
+%\wheelchart{1.5cm}{0.5cm}{%
+%  10/13em/accent!30/Sleeping \& dreaming about work,
+%  25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
+%  5/11em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
+%  20/11em/accent!40/Spending time with family,
+%  5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
+%  30/9em/accent/Showing Yahoo!\ \mbox{employees} that their work has meaning,
+%  5/8em/accent!20/Baking cupcakes
+%}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the currentc column
+%\newpage
+%
+%\cvsection{Publications}
+%
+%% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
+%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+%% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
+%\mynames{Lim/Lian\bibnamedelima Tze,
+%  Wong/Lian\bibnamedelima Tze,
+%  Lim/Tracy,
+%  Lim/L.\bibnamedelimi T.}
+%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+%
+%\nocite{*}
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+%
+%\divider
+%
+%\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}}, type=article]
+%
+%\divider
+%
+%\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+%\cvsection{Life Philosophy}
+%\begin{quote}
+%``If you don't have any shadows, you're not standing in the light.''
+%\end{quote}
+
+\cvsection{Proud of}
+
+\cvachievement{\faTrophy}{4 Spot bonuses}{Kotlin compiler testing and UAST migration at Google scale}
+
+\divider
+
+\cvachievement{\faHeartbeat}{18 Peer bonuses}{Helping several partner teams and colleagues; fixing long-standing issues; beefing up tests; etc.}
+
+\divider
+
+\cvachievement{\faChartLine}{K2 adoption}{AGP 8.6+ and 1/3 Android Studio users while K2 IDE is not supported yet}
+
+%\cvsection{Strengths}
+%
+%\cvtag{Hard-working (18/24)}
+%\cvtag{Persuasive}\\
+%\cvtag{Motivator \& Leader}
+%
+%\divider\smallskip
+%
+%\cvtag{UX}
+%\cvtag{Mobile Devices \& Applications}
+%\cvtag{Product Management \& Marketing}
+
+\cvsection{Skills}
+
+\begin{itemize}
+\item Compiler, Compiler Optimization
+\item Static Program Analysis
+\item Program Synthesis
+\item Automated Software Testing
+\item JVM Application Performance Optimization
+\end{itemize}
+
+\cvsection{Programming Languages}
+
+\begin{itemize}
+\item Java, Kotlin: Professional Proficiency
+\item Python, Ruby, OCaml: Working Proficiency
+\item C\#, C++, C, Bash: Basic Working Knowledge
+\end{itemize}
+
+\cvsection{Languages}
+
+%\cvskill{Korean}{5}
+% \divider
+%
+%\cvskill{English}{4.5}
+% \divider
+%
+%\cvskill{German}{3.5} %% supports X.5 values.
+
+\begin{itemize}
+\item Korean: Native
+\item English: Professional Proficiency
+\end{itemize}
+
+\cvsection{Education}
+
+\cvevent{Ph. D. \ in Computer Science}{University of Maryland, College Park}{Aug 2010 -- Feb 2016}{}
+
+\divider\smallskip
+
+\cvevent{M.S.\ in Computer Science}{KAIST}{Mar 2005 -- Feb 2007}{}
+
+\divider\smallskip
+
+\cvevent{B.S.\ in Computer Science}{KAIST}{Mar 2001 -- Feb 2005}{}
+
+%\newpage
+%
+%\cvsection{Referees}
+%
+% \cvref{name}{email}{mailing address}
+%\cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+%{Address Line 1\\Address line 2}
+%
+%\divider
+%
+%\cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+%{Address Line 1\\Address line 2}
+
+\end{paracol}
+
+\end{document}
