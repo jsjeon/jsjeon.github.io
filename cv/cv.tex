@@ -138,11 +138,11 @@ Designed and implemented K2 UAST from scratch:
 Contributed to K2, the new Kotlin compiler frontend, end-to-end:
 \begin{itemize}
 \item Deserialization: to load Kotlin stdlib, other libraries or modules
-\item (old-school) parsing: frontend IR generation
-\item Resolution: types, declarations, call targets, SAM/suspend conversion, etc.
+\item Frontend IR generation (a.k.a. parsing)
+\item Resolution: types, declarations, call targets, SAM/\texttt{suspend} conversion, etc.
 \item Static analyses: control-flow / data-flow analysis, diagnostics
 \item Conversion to backend IR
-\item Serialization: to generate @Metadata for reflection
+\item Serialization: to generate \texttt{@Metadata} for reflection
 \end{itemize}
         \end{itemize}
         }
@@ -157,7 +157,7 @@ Researched; designed; implemented; and deployed optimizations and obfuscations, 
 \begin{itemize}
 \item local type/nullability analysis, call-site optimization (e.g., remove Kotlin intrinsics calls),
 \item \texttt{StringBuilder} optimization, compile-time reflection simplification, constant/call canonicalization,
-\item Kotlin @Metadata rewriting, identifier string obfuscation, package obfuscation
+\item Kotlin \texttt{@Metadata} rewriting, identifier string obfuscation, package obfuscation
 \end{itemize}
 \item\emph{\href{https://cloud.google.com/compute/}{Google Compute Engine}}:
 \href{https://cloudplatform.googleblog.com/2018/06/Introducing-sole-tenant-nodes-for-Google-Compute-Engine.html}{Sole-tenant nodes},
